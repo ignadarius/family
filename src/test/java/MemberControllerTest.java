@@ -16,6 +16,8 @@ public class MemberControllerTest {
         MemberController c = new MemberController(r);
         c.addMember(new Member("Darius","1"));
         assert(c.getMembers().size() == 1);
+        c.addMember(new Member("Andrei","2"));
+        assert(c.getMembers().size() == 2);
 
     }
 
