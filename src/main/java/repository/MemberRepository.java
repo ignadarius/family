@@ -32,7 +32,7 @@ public class MemberRepository {
 			this.members.add(m);			
 		}
 	 }catch(Exception ex){
-         System.err.println(ex.getMessage());
+         //System.err.println(ex.getMessage());
      }
 	try{
 		FileReader fileReaderEntry = null;
@@ -50,7 +50,7 @@ public class MemberRepository {
 			this.entries.add(e);			
 		}
 	 }catch(Exception ex){
-         System.err.println(ex.getMessage());
+         //System.err.println(ex.getMessage());
      }
 	}
 

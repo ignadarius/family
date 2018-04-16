@@ -1,11 +1,11 @@
 package ui;
 
-import java.util.ArrayList;
+import controller.MemberController;
+
 import java.util.List;
 import java.util.Scanner;
 
-import model.*;
-import controller.MemberController;;
+;
 
 public class MemberUI {
 	public MemberController ctrl;
@@ -48,8 +48,7 @@ public class MemberUI {
 		
 		System.out.println(menu);
 	}
-	
-	
+
 	public void Run()
 	{
 		printMenu();
@@ -79,14 +78,11 @@ public class MemberUI {
 				
 				System.out.println("Enter the value:");
 				String valueS = in.nextLine();
-				int valueInt=Integer.parseInt(valueS);
 				
 				System.out.println("Enter the id of the member:");
 				String idS = in.nextLine();
-				int idInt=Integer.parseInt(idS);
-				
-				Entry e= new Entry(type, valueInt, idInt);			
-				ctrl.addEntry(e);
+
+				ctrl.addEntry(type, valueS, idS)
 			    
 			}
 			if(cmd==3)
