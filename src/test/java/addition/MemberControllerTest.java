@@ -114,6 +114,16 @@ public class MemberControllerTest {
         assert(res == 0);
     }
 
+    @org.junit.Test
+    public void getAllEntriesForMember() throws Exception {
+        MemberRepository r = new MemberRepository();
+        MemberController c = new MemberController(r);
+        c.addMember(new Member("Darius","1"));
+        c.addEntry("income","100","1");
+        c.addEntry("cost","100","1");
+        assert(c.getEntriesForMember(1).size() == 2);
+    }
+
 
 
 
